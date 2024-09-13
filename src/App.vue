@@ -3,7 +3,10 @@
     <header class="header">
       <h1>Principles of Computer Composition Exam Grade Query System</h1> <!-- Updated Header -->
     </header>
-
+    <!-- <nav>
+      <router-link to="/admin">Admin</router-link>   
+    </nav>
+    <router-view/> -->
     <!-- 登录界面 -->
     <section v-if="!isLoggedIn">
       <div v-if="showLogin" class="login-section">
