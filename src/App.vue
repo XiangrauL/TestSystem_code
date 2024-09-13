@@ -62,6 +62,7 @@
 
 <script setup>
 import { ref } from 'vue'; 
+import config from '@/config.js';  // 导入配置文件
 import GradesChart from './components/GradesChart.vue'; // 确保路径正确
 
 
@@ -120,8 +121,8 @@ const login = async () => {
     };
 
     console.log('Sending request:', requestBody); // 打印请求体
-
-    const response = await fetch('http://10.121.63.72:8366/grades', {  // Updated URL
+    console.log('Request URL:', `${config.API_BASE_URL}/grades`);
+    const response = await fetch(`${config.API_BASE_URL}/grades`, {  // Updated URL
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -190,7 +191,7 @@ const changePassword = async () => {
   changePasswordErrorMessage.value = '';
 
   try {
-    const response = await fetch('http://10.121.63.72:8366/change_password', {  // 更新URL
+    const response = await fetch(`${config.API_BASE_URL}/change_password`, {  // 更新URL
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
