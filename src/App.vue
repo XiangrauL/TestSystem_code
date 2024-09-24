@@ -65,7 +65,7 @@
 
 <script setup>
 import { ref } from 'vue'; 
-import config from '@/config.js';  // 导入配置文件
+import config from '@/config.js';  // 导入配置文件//
 import GradesChart from './components/GradesChart.vue'; // 确保路径正确
 
 
